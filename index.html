@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-20">
+            <h1 class="col-lg-6 col-md-12 col-sm-12">To-Do List</h1>
+            <div class="col-lg-6 col-md-12 col-sm-12 row text-muted action-btns">
+                <a id="allTasks" class="toggle-tasks active">All</a>
+                <a id="completedTasks" class="toggle-tasks">Completed Tasks</a>
+                <a id="pendingTasks" class="toggle-tasks">Pending Tasks</a>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">+</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <!-- no storage -->
+    <!-- <script src="assets/js/nostrorage-scripts.js"></script> -->
+    
+    <!-- local storage -->
+    <!-- <script src="assets/js/localstorage-scripts.js"></script> -->
+
+    <!-- cookies storage -->
+    <script src="assets/js/cookie-scripts.js"></script>
+
+    <!-- session storage -->
+    <!-- <script type="text/javascript" src="assets/js/session-scripts.js"></script> -->
+
+    <!-- main scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

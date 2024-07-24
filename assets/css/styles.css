@@ -1,0 +1,212 @@
+@import url('assets/css/fonts/Lato/Lato-Regular.ttf');
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, *, *::placeholder, button {
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-style: normal;    
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 14px;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+}
+
+h1 {
+    color: #007bff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+#addTaskBtn {
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    outline: none;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+li {
+    cursor: pointer;
+    background: #f7f7f7;
+    margin: 5px 0;
+    padding: 5px 0.5rem 5px 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    position: relative;
+    border-radius: 5rem;
+}
+
+li.completed {
+    padding: 5px 0.5rem 5px 2.8rem;
+    color: #888;
+}
+
+li.completed::before {
+    content: '✓';
+    color: #ffffff;
+    position: absolute;
+    left: 0.4rem;
+    font-size: 1.05rem;
+    border-radius: 50%;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: #16aa38;
+    text-align: center;
+}
+
+li.completed::after {
+    content: "";
+    border-top: 1px solid #888;
+    position: absolute;
+    width: 90%;
+    left: 2.5rem;
+}
+
+button.delete {
+    padding: 5px;
+    background: #dc3545;
+    width: 1.8rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    visibility: hidden;
+    z-index: 1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+li:hover button.delete {
+    visibility: visible;
+    box-shadow: 0px 0px 0px 5px #fcfcfc;
+}
+
+button.delete:hover {
+    background: #c82333;
+}
+
+.status {
+    margin-right: 10px;
+    color: white;
+    background-color: #007bff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+li.completed .status {
+    background-color: #28a745;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.toggle-tasks{
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.action-btns .toggle-tasks:hover, .action-btns .toggle-tasks.active{
+    color: #007bff;
+    filter: drop-shadow(0 0 5px #005cbe59);
+    -webkit-filter: drop-shadow(0 0 5px #005cbe30);
+}
+
+.hidden{
+    display: none;
+}
+
+/* media query for col-md-12 col-sm-12 */
+@media (max-width: 768px) {
+    .col-md-12 {
+        width: 100%;
+    }
+    .container {
+        width: 80%;
+    }
+}
+
+/* media query for col-md-6 col-sm-6 */
+@media (max-width: 576px) {
+    .col-sm-12 {
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+/* media query for col-md-4 col-sm-4 */
+@media (max-width: 480px) {
+    .col-md-12, .col-sm-12 {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
+}
